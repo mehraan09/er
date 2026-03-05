@@ -79,7 +79,6 @@ export default function PasswordGate({ password, onUnlock }: { password: string;
             fontFamily: "'DM Sans'", fontSize: 17,
             background: "rgba(255,255,255,0.85)",
             color: "#2d1b2e", letterSpacing: "4px",
-            cursor: "none",
           }}
           onFocus={e => { e.target.style.borderColor = "#e8446a"; e.target.style.boxShadow = "0 0 0 4px rgba(232,68,106,0.1)"; }}
           onBlur={e  => { e.target.style.borderColor = "#e8c8d4"; e.target.style.boxShadow = "none"; }}
@@ -95,7 +94,6 @@ export default function PasswordGate({ password, onUnlock }: { password: string;
             color: "#fff", fontFamily: "'DM Sans'", fontWeight: 500,
             fontSize: 15, letterSpacing: "0.08em",
             boxShadow: "0 8px 32px rgba(232,68,106,0.28)",
-            cursor: "none",
           }}
         >
           Open the surprise ❤️

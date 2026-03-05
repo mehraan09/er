@@ -44,12 +44,22 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
         style={{ fontFamily:"'DM Sans',system-ui,sans-serif", fontSize:11, fontWeight:500, letterSpacing:"0.25em", textTransform:"uppercase", color:"#c9a96e", marginBottom:14 }}
       >This day belongs to you.</p>
 
-      {/* Heading */}
       <h1
-        className="grad-text mb-8 leading-tight"
-        style={{ fontFamily:"'Cormorant Garamond',Georgia,serif", fontSize:"clamp(36px,8vw,80px)", fontWeight:600 }}
-      >Happy Birthday {herName} 🎉</h1>
-
+        className="text-center mb-12"
+        style={{
+          fontFamily: "'Dancing Script', cursive",
+          fontSize: "clamp(32px,9vw,90px)",
+          color: "#e8446a",
+          textShadow: "0 10px 30px rgba(232,68,106,0.25)",
+          lineHeight: 1.25,
+        }}
+      >
+        Happy Birthday
+        <br />
+        <span className="text-black">My Majesty, My Lady, My Ma'am —</span>
+        <span>{herName} ❤️</span>
+        
+      </h1>
       {/* ═══ SHAYARI CARD ═══ */}
       <div
         className="w-full max-w-[580px] mb-10 flex flex-col items-center"

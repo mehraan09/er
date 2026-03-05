@@ -90,6 +90,13 @@ export const CONFIG = {
     },
     {
       emoji: "🤝",
+      caption: "How cant i miss this.",
+      date: "",
+      mood: "special",
+      videoSrc : "she.mp4"
+    },
+    {
+      emoji: "🤝",
       caption: "There should definitely be more pictures of you.",
       date: "Every ordinary day",
       mood: "special",

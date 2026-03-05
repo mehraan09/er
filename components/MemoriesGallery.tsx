@@ -8,6 +8,7 @@ interface Memory {
   date: string;
   mood: string;
   imageSrc?: string;
+  videoSrc?: string;
 }
 
 const ROTATIONS = [-2.5, 1.8, -4, 3.2, -1.5, 2.8, -3.5, 1.2];
@@ -45,10 +46,10 @@ export default function MemoriesGallery({ memories }: { memories: Memory[] }) {
           fontWeight: 300, fontStyle: "italic",
           color: "#2d1b2e",
         }}>
-          Our Beautiful Memories 📸
+        Some beauty deserves eternity. 📸
         </h2>
         <p className="mt-3" style={{ fontFamily: "'DM Sans'", fontSize: 14, color: "#b565a7", fontWeight: 300 }}>
-          Every moment with you is worth keeping forever
+          I could look at you forever and never get tired of your beauty and spend a lifetime admiring you.
         </p>
       </motion.div>
 
@@ -78,31 +79,41 @@ export default function MemoriesGallery({ memories }: { memories: Memory[] }) {
                 }}
                 onClick={() => setLightbox(mem)}
               >
-                {/* Photo area */}
-                {mem.imageSrc ? (
-                  <img
-                    src={mem.imageSrc}
-                    alt={mem.caption}
-                    className="w-full object-cover block"
-                    style={{ aspectRatio: isTall ? "3/4" : "1/1" }}
-                  />
-                ) : (
-                  <div
-                    className="w-full flex flex-col items-center justify-center gap-2"
-                    style={{
-                      aspectRatio: isTall ? "3/4" : "1/1",
-                      background: `linear-gradient(135deg, #fce7f3, #ede9fe)`,
-                      fontSize: isTall ? 64 : 52,
-                    }}
-                  >
-                    <span>{mem.emoji}</span>
-                    {isTall && (
-                      <span style={{ fontFamily: "'Dancing Script'", fontSize: 14, color: "#b565a7", textAlign: "center", padding: "0 16px" }}>
-                        {mem.date}
-                      </span>
-                    )}
-                  </div>
-                )}
+{/* Photo / Video area */}
+{mem.videoSrc ? (
+  <video
+    src={mem.videoSrc}
+    className="w-full object-cover block"
+    style={{ aspectRatio: isTall ? "3/4" : "1/1" }}
+    muted
+    loop
+    playsInline
+    autoPlay
+  />
+) : mem.imageSrc ? (
+  <img
+    src={mem.imageSrc}
+    alt={mem.caption}
+    className="w-full object-cover block"
+    style={{ aspectRatio: isTall ? "3/4" : "1/1" }}
+  />
+) : (
+  <div
+    className="w-full flex flex-col items-center justify-center gap-2"
+    style={{
+      aspectRatio: isTall ? "3/4" : "1/1",
+      background: `linear-gradient(135deg, #fce7f3, #ede9fe)`,
+      fontSize: isTall ? 64 : 52,
+    }}
+  >
+    <span>{mem.emoji}</span>
+    {isTall && (
+      <span style={{ fontFamily: "'Dancing Script'", fontSize: 14, color: "#b565a7", textAlign: "center", padding: "0 16px" }}>
+        {mem.date}
+      </span>
+    )}
+  </div>
+)}
 
                 {/* Hover overlay */}
                 <div className="overlay rounded-[1px]">
