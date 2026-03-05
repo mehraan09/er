@@ -47,36 +47,47 @@ export const CONFIG = {
       caption: "And your poses… wow.",
       date: "That unforgettable trip",
       mood: "adventurous",
+      imageSrc: "img2.jpg",
+
     },
     {
       emoji: "🌅",
       caption: "Perfect. Just perfect.",
       date: "Golden hour magic",
       mood: "dreamy",
+      imageSrc: "img3.jpg",
+
     },
     {
       emoji: "🎉",
       caption: "Pink suits you more than you think.",
       date: "A night to remember",
       mood: "celebratory",
+      imageSrc: "img4.jpg",
+
     },
     {
       emoji: "☕",
       caption: "Black looks incredible on you.",
       date: "A quiet Sunday morning",
       mood: "cozy",
+      imageSrc: "img5.jpg",
+
     },
     {
       emoji: "🌸",
       caption: "Your pfp… and your music taste.",
       date: "Little things I notice",
       mood: "romantic",
+      imageSrc: "img6.jpg",
+
     },
     {
       emoji: "🌙",
       caption: "Your humour and your nonchalant energy.",
       date: "Late night conversations",
       mood: "intimate",
+
     },
     {
       emoji: "🤝",
