@@ -48,7 +48,7 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
         className="text-center mb-12"
         style={{
           fontFamily: "'Dancing Script', cursive",
-          fontSize: "clamp(32px,9vw,90px)",
+          fontSize: "clamp(32px,5vw,40px)",
           color: "#e8446a",
           textShadow: "0 10px 30px rgba(232,68,106,0.25)",
           lineHeight: 1.25,
@@ -57,10 +57,9 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
         Happy Birthday
         <br />
         <span className="text-black">My Majesty, My Lady, My Ma'am —</span>
-        <span>{herName} ❤️</span>
+        <span>{herName}❤️</span>
         
       </h1>
-      {/* ═══ SHAYARI CARD ═══ */}
       <div
         className="w-full max-w-[580px] mb-10 flex flex-col items-center"
         style={{
@@ -74,8 +73,6 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
       >
         <CornerFlourish pos="tl" /><CornerFlourish pos="tr" />
         <CornerFlourish pos="bl" /><CornerFlourish pos="br" />
-
-        {/* Top ornament row */}
         <div
           style={{ fontSize:13, letterSpacing:"0.5em", color:"#c9a96e", opacity:0.65, marginBottom:28 }}
         >❧ ✦ ❧</div>
