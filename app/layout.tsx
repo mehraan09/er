@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "A romantic birthday surprise made with love",
   openGraph: {
     title: "Ertiba Akash",
-    url: "https://ertiba.vercel.app",
+    url: "https://ertibakash.vercel.app",
     images: [{ url: "/img5.jpg", width: 600, height: 600, alt: "Er" }],
     locale: "en_US",
     type: "website",

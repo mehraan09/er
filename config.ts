@@ -76,18 +76,17 @@ export const CONFIG = {
     },
     {
       emoji: "🌸",
-      caption: "Your pfp… and your music taste.",
+      caption: "Your humour and your nonchalant energy.",
       date: "Little things I notice",
       mood: "romantic",
-      imageSrc: "img6.jpg",
 
     },
     {
       emoji: "🌙",
-      caption: "Your humour and your nonchalant energy.",
+      caption: "Your pfp… and your music taste.",
       date: "Late night conversations",
       mood: "intimate",
-
+      imageSrc: "img6.jpg",
     },
     {
       emoji: "🤝",
