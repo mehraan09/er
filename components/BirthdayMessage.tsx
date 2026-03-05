@@ -2,35 +2,6 @@ type BirthdayMessageProps = {
   herName: string;
 };
 
-function OrnamentDivider() {
-  return (
-    <div className="flex items-center gap-3 w-full max-w-[380px] my-1">
-      <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, #d4a8c0)" }} />
-      <svg width="28" height="18" viewBox="0 0 28 18" fill="none">
-        <path d="M14 1 C10 1, 1 9, 1 9 C1 9, 10 17, 14 17 C18 17, 27 9, 27 9 C27 9, 18 1, 14 1Z"
-          stroke="#c9a96e" strokeWidth="0.8" fill="none" />
-        <circle cx="14" cy="9" r="2.2" fill="#e8446a" opacity="0.7" />
-        <circle cx="7"  cy="9" r="1"   fill="#c9a96e" opacity="0.5" />
-        <circle cx="21" cy="9" r="1"   fill="#c9a96e" opacity="0.5" />
-      </svg>
-      <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, #d4a8c0)" }} />
-    </div>
-  );
-}
-
-function CornerFlourish({ pos }: { pos: "tl"|"tr"|"bl"|"br" }) {
-  const style: React.CSSProperties = {
-    position: "absolute",
-    fontSize: 16,
-    opacity: 0.32,
-    color: "#c9a96e",
-    ...(pos === "tl" && { top: 14, left: 18 }),
-    ...(pos === "tr" && { top: 14, right: 18 }),
-    ...(pos === "bl" && { bottom: 14, left: 18 }),
-    ...(pos === "br" && { bottom: 14, right: 18 }),
-  };
-  return <span style={style}>✦</span>;
-}
 
 export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
   return (
@@ -48,7 +19,7 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
         className="text-center mb-12"
         style={{
           fontFamily: "'Dancing Script', cursive",
-          fontSize: "clamp(32px,5vw,40px)",
+          fontSize: "clamp(32px,9vw,40px)",
           color: "#e8446a",
           textShadow: "0 10px 30px rgba(232,68,106,0.25)",
           lineHeight: 1.25,
@@ -60,63 +31,6 @@ export default function BirthdayMessage({ herName }: BirthdayMessageProps) {
         <span>{herName}❤️</span>
         
       </h1>
-      <div
-        className="w-full max-w-[580px] mb-10 flex flex-col items-center"
-        style={{
-          background:"linear-gradient(160deg,#fffaf5 0%,#fff5f9 50%,#fdf8ff 100%)",
-          border:"1px solid rgba(201,169,110,0.3)",
-          borderRadius:24,
-          padding:"48px 40px 40px",
-          position:"relative",
-          boxShadow:"0 2px 0 rgba(201,169,110,0.18), 0 4px 0 rgba(255,255,255,0.8), 0 24px 64px rgba(232,68,106,0.1), inset 0 1px 0 rgba(255,255,255,0.9)",
-        }}
-      >
-        <CornerFlourish pos="tl" /><CornerFlourish pos="tr" />
-        <CornerFlourish pos="bl" /><CornerFlourish pos="br" />
-        <div
-          style={{ fontSize:13, letterSpacing:"0.5em", color:"#c9a96e", opacity:0.65, marginBottom:28 }}
-        >❧ ✦ ❧</div>
-
-        {/* Verse 1 — misra oolaa */}
-        <p
-          dir="rtl" lang="ur"
-          style={{
-            fontFamily:"'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif",
-            fontSize:"clamp(22px,4vw,32px)",
-            lineHeight:2.5,
-            color:"#2d1b2e",
-            textAlign:"center",
-            letterSpacing:0,
-            wordSpacing:"0.08em",
-            width:"100%",
-          }}
-        >تیری صورت سے ہے عالم میں بہاروں کو ثبات</p>
-
-        {/* Ornament between verses */}
-        <OrnamentDivider />
-
-        {/* Verse 2 — misra saani */}
-        <p
-          dir="rtl" lang="ur"
-          style={{
-            fontFamily:"'Noto Nastaliq Urdu','Jameel Noori Nastaleeq',serif",
-            fontSize:"clamp(22px,4vw,32px)",
-            lineHeight:2.5,
-            color:"#2d1b2e",
-            textAlign:"center",
-            letterSpacing:0,
-            wordSpacing:"0.08em",
-            width:"100%",
-            marginBottom:24,
-          }}
-        >تیری آنکھوں کے سوا دنیا میں رکھا کیا ہے</p>
-
-        {/* Bottom ornament */}
-        <div
-          style={{ fontSize:13, letterSpacing:"0.5em", color:"#c9a96e", opacity:0.65, marginTop:24, transform:"scaleX(-1)" }}
-        >❧ ✦ ❧</div>
-
-      </div>
 
       {/* Typewriter card */}
       <div

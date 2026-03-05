@@ -87,14 +87,14 @@ export default function Home() {
             <NameReveal name={CONFIG.herName} />
           </section>
 
-          <section id="love-letter" className="relative overflow-hidden px-6 py-24"
-            style={{ background: "linear-gradient(160deg, #fff8f2 0%, #f9eeff 100%)" }}>
-            <LoveLetter yourName={CONFIG.yourName} herName={CONFIG.herName} />
-          </section>
-
           <section id="reasons" className="relative overflow-hidden px-6 py-24"
             style={{ background: "linear-gradient(135deg, #fdf0f4 0%, #f0e8ff 100%)" }}>
             <Reasons reasons={CONFIG.reasons} />
+          </section>
+
+          <section id="love-letter" className="relative overflow-hidden px-6 py-24"
+            style={{ background: "linear-gradient(160deg, #fff8f2 0%, #f9eeff 100%)" }}>
+            <LoveLetter yourName={CONFIG.yourName} herName={CONFIG.herName} />
           </section>
 
           <section id="counter" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6 py-20"
