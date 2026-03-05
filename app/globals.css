@@ -26,7 +26,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { cursor: none; font-family: 'DM Sans', system-ui, sans-serif; }
+body { font-family: 'DM Sans', system-ui, sans-serif; }
 
 /* ── Cursor ── */
 #custom-cursor {
