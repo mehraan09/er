@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ertiba Akash",
     url: "https://ertiba.vercel.app",
-    images: [{ url: "/ak3.jpeg", width: 600, height: 600, alt: "Er" }],
+    images: [{ url: "/img5.jpg", width: 600, height: 600, alt: "Er" }],
     locale: "en_US",
     type: "website",
   },

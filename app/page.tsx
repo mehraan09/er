@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CONFIG } from "@/config";
@@ -29,7 +28,7 @@ const SECTION_IDS = [
 ];
 
 export default function Home() {
-  const [unlocked, setUnlocked] = useState(true);
+  const [unlocked, setUnlocked] = useState(false);
   const [showSecret, setShowSecret] = useState(false);
 
   return (
