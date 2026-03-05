@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Birthday Surprise",
     images: [
       {
-        url: "https://ertibakash.vercel.app/img5.jpg",
+        url: "https://ertibakash.vercel.app/img7.jpg",
         width: 1200,
         height: 630,
         alt: "Ertiba & Akash",

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CONFIG } from "@/config";
 
-import HeartCursor from "@/components/HeartCursor";
 import MusicPlayer from "@/components/MusicPlayer";
 import SecretMessage from "@/components/SecretMessage";
 import ProgressBar from "@/components/ProgressBar";
@@ -33,8 +32,6 @@ export default function Home() {
 
   return (
     <>
-      <HeartCursor />
-
       <AnimatePresence>
         {!unlocked && (
           <motion.div

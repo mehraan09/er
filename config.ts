@@ -79,7 +79,7 @@ export const CONFIG = {
       caption: "Your humour and your nonchalant energy.",
       date: "Little things I notice",
       mood: "romantic",
-
+      imageSrc: "img7.jpg",
     },
     {
       emoji: "🌙",
