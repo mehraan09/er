@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Birthday Surprise",
     images: [
       {
-        url: "/img5.jpg",   // should be 1200x630
+        url: "https://ertibakash.vercel.app/img5.jpg",
         width: 1200,
         height: 630,
         alt: "Ertiba & Akash",
@@ -31,9 +31,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "A Special Surprise For You 💕",
-    description: "A romantic birthday surprise made with love",
-    images: ["/img5.jpg"],
+    images: ["https://ertibakash.vercel.app/img5.jpg"],
   },
 };
 
