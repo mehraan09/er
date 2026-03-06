@@ -9,16 +9,28 @@ export default function PasswordGate({ password, onUnlock }: { password: string;
   const [error, setError]   = useState("");
   const [shaking, setShake] = useState(false);
 
-  function tryUnlock() {
-    if (input.trim().toLowerCase() === password.toLowerCase()) {
-      onUnlock();
-    } else {
-      setError("That's not it… but you're still adorable ❤️");
-      setShake(true);
-      setInput("");
-      setTimeout(() => { setError(""); setShake(false); }, 3000);
-    }
+async function tryUnlock() {
+  const success = input.trim().toLowerCase() === password.toLowerCase();
+  await fetch("/api/password", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input,
+      success
+    }),
+  });
+
+  if (success) {
+    onUnlock();
+  } else {
+    setError("That's not it… but you're still adorable ❤️");
+    setShake(true);
+    setInput("");
+    setTimeout(() => { setError(""); setShake(false); }, 3000);
   }
+}
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6"
